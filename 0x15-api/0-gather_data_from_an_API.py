@@ -16,6 +16,8 @@ if __name__ == "__main__":
 
     employee_id = sys.argv[1]
 
+    user = requests.get(url + "users/{}".format(employee_id)).json()
+
     user_response = requests.get(url + "users/{}".format(employee_id))
 
     user = user_response.json()
